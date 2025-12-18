@@ -248,6 +248,12 @@
   email: apivotto@fbk.eu
   usernameFBK: apivotto
 
+- id: ChristianSassi
+  name: Christian
+  surname: Sassi
+  email: csassi@fbk.eu
+  usernameFBK: csassi
+
 - id: PetrSabel
   name: Petr
   surname: Sabel
