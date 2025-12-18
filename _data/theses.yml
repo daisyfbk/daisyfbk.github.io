@@ -1,3 +1,11 @@
+- id: ChristianSassi_M
+  author: ChristianSassi
+  type: M
+  title: "Design and Evaluation of a Federated Learning-Based Approach for Anomaly Detection in Industrial Control Systems"
+  institution: University of Trento
+  year: 2025
+  supervisor: RobertoDoriguzziCorin
+
 - id: PetrSabel_M
   author: PetrSabel
   type: M
