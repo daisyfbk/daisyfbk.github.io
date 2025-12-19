@@ -38,6 +38,18 @@
   doi: 10.1145/3712289
 
 
+- id: iris_2025_bbc94c393cc8b82bce5d
+  id_iris: 365427,
+  title: "Exploiting Kubernetes' Image Pull Implementation to Deny Node Availability"
+  authors:
+    - LuisAugustoDiasKnob
+    - MatteoFranzil
+    - DomenicoSiracusa
+  destination: ieeetransactionsondependableandsecurecomputing
+  year: 2025
+  doi: 10.1109/tdsc.2025.3641311
+
+
 - id: iris_2025_ae7f26c66ae3e3f3395b
   id_iris: 361307,
   title: "Carbon-Aware Spatio-Temporal Workload Shifting in Edge–Cloud Environments: A Review and Novel Algorithm"
