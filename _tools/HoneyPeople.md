@@ -8,15 +8,12 @@ peopleOrder: surname
 publications: []
 ---
 
-HoneyPeople is a cyber deception tool developed in collaboration with University of Trento.
+HoneyPeople is a cyber deception tool developed in collaboration with the University of Trento, with a focus on phishing and social engineering attacks. Artificial intelligence is leveraged to impersonate victims by modeling their personality and organizational role. In addition to the victims, the platform provides a fully programmable environment that includes computing assets (e.g., laptops and servers) and business services such as file storage, email, and CRM systems, on which victims carry out their daily activities.
 
-HoneyPeople is a tool developed to interact with phishing/malicious emails in order to waste attacker's time and gather valuable intelligence guiding the attacker in a sandboxed environment.
-HoneyPeople leverages Artificial Intelligence (AI) to emulate employees of a fictitious company or business unit; each employee can be customized to have a different personality and role.
+Within this environment, attackers’ malicious actions and victims’ unaware behaviors coexist, creating a unique scenario that enables the study of tactics, techniques, and procedures across the cyber kill chain.
 
-Moreover, each employee can be configured with one or more computing machines (laptops, servers, etc.) on which they carry out their business activities; these machines are also used to make the user capable of interacting with malicious links and payloads contained in emails, thus not limiting to responding to the emails.
+HoneyPeople has also been used in Capture The Flag competitions, where participants were required to apply social engineering techniques to gain access to the environment, bringing a fresh and innovative perspective to the competition format. Furthermore, HoneyPeople has been employed as an educational tool, allowing students to impersonate attackers in order to increase awareness of phishing campaigns, the techniques employed, and their potential consequences.
 
-HoneyPeople has also been used as part of a Capture The Flag (CTF) competition, where participants were asked to use Social Engineering to gather access to the environment, giving a "breath of fresh air" to the competition. HoneyPeople has also been used as an educational tool allowing students to impersonate the attacker in order to make them aware about phishing campaigns, techniques employed and its consequences.
-
-Ongoing developments aim to make the environment dynamic, allowing users to perform their business activities, making the environment more realistic and resembling a real company or business unit.
+Ongoing developments aim to make the environment more dynamic by allowing users to perform realistic business activities, further enhancing realism and better approximating the behavior of a real company or business unit.
 
 The code of HoneyPeople is available on [GitLab](https://gitlab.fbk.eu/honeypeople).
