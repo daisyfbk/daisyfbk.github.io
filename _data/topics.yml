@@ -26,16 +26,17 @@
   image: Decepto.png
   order: 2
 
-- id: LUCID
-  title: LUCID
-  category: spotlight 
-  url: /tools/LUCID
-  image: LUCID.jpg
+- id: FLAD
+  title: FLAD
+  category: spotlight
+  url: /tools/FLAD
+  image: FLAD.png
   order: 4
 
 - id: kubeDelphi
   title: kubeDelphi
-  category: spotlight 
+  category: spotlight
   url: /tools/kubeDelphi
   image: kubeDelphi.png
   order: 5
+
