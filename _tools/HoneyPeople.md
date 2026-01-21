@@ -4,6 +4,7 @@ people:
   - DanieleSantoro
   - ClaudioFacchinetti
   - DomenicoSiracusa
+  - RobertoDoriguzziCorin
 peopleOrder: surname
 publications: []
 ---
