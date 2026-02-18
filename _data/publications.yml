@@ -3,6 +3,44 @@
 # The following string is a separator used by the parser to trim away generated content
 # Please, please, please, keep this here!
 #--#--#--#--#--#
+- id: iris_2026_ef42f67851780044e79e
+  id_iris: 364967,
+  title: "Sharpening Kubernetes Audit Logs with Context Awareness"
+  authors:
+    - MatteoFranzil
+    - ValentinoArmani
+    - LuisAugustoDiasKnob
+    - DomenicoSiracusa
+  destination: computernetworks
+  year: 2026
+  doi: 10.1016/j.comnet.2025.111890
+
+
+- id: iris_2026_6d0d471398135879b86d
+  id_iris: 365427,
+  title: "Exploiting Kubernetes' Image Pull Implementation to Deny Node Availability"
+  authors:
+    - LuisAugustoDiasKnob
+    - MatteoFranzil
+    - DomenicoSiracusa
+  destination: ieeetransactionsondependableandsecurecomputing
+  year: 2026
+  doi: 10.1109/tdsc.2025.3641311
+
+
+- id: iris_2025_f772cc39cb05bd9d930c
+  id_iris: 366049,
+  title: "Rethinking NIDS Rule-Based Pre-Filtering"
+  authors:
+    - HenriqueBeckerBrum
+    - LuisA.DiasKnob
+    - TiagoFerreto
+    - DomenicoSiracusa
+  destination: 21stinternationalconferenceonnetworkandservicemanagement
+  year: 2025
+  doi: 10.23919/cnsm67658.2025.11297559
+
+
 - id: iris_2025_ee27c892d9762dd36c1f
   id_iris: 357329,
   title: "DiversityOne: A Multi-Country Smartphone Sensor Dataset for Everyday Life Behavior Modeling"
@@ -38,16 +76,16 @@
   doi: 10.1145/3712289
 
 
-- id: iris_2025_bbc94c393cc8b82bce5d
-  id_iris: 365427,
-  title: "Exploiting Kubernetes' Image Pull Implementation to Deny Node Availability"
+- id: iris_2025_bd945b004b12734c7b20
+  id_iris: 365888,
+  title: "Disruption-Aware Microservice Re-Orchestration for Cost-Efficient Multi-Cloud Deployments"
   authors:
-    - LuisAugustoDiasKnob
-    - MatteoFranzil
+    - MarcoZambianco
+    - SilvioCretti
     - DomenicoSiracusa
-  destination: ieeetransactionsondependableandsecurecomputing
+  destination: ieeetransactionsonservicescomputing
   year: 2025
-  doi: 10.1109/tdsc.2025.3641311
+  doi: 10.1109/tsc.2025.3604373
 
 
 - id: iris_2025_ae7f26c66ae3e3f3395b
@@ -62,19 +100,6 @@
   destination: sustainability
   year: 2025
   doi: 10.3390/su17146433
-
-
-- id: iris_2025_77bf63f9047161dd9cfc
-  id_iris: 364967,
-  title: "Sharpening Kubernetes Audit Logs with Context Awareness"
-  authors:
-    - MatteoFranzil
-    - ValentinoArmani
-    - LuisAugustoDiasKnob
-    - DomenicoSiracusa
-  destination: computernetworks
-  year: 2025
-  doi: 10.1016/j.comnet.2025.111890
 
 
 - id: iris_2025_545ae5e10c1aeabccd7d

@@ -1143,7 +1143,7 @@
 
 - id: I.Rodriguez
   name:  I.
-  surname: Rodriguez
+  surname: Rodríguez
 
 - id: I.T.Monroy
   name:  I. T.
@@ -1456,6 +1456,10 @@
 - id: LucianoPaschoalGaspary
   name:  Luciano
   surname: Paschoal Gaspary
+
+- id: LuisA.DiasKnob
+  name:  Luis A.
+  surname: Dias Knob
 
 - id: LukaszOgrodowczyk
   name:  Lukasz

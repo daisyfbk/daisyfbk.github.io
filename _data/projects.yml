@@ -163,3 +163,24 @@
   partners:
     - name: CherryChain
       url: https://cherrychain.it
+
+- id: FLEXIA
+  title: FLEXIA
+  titleAddon: Local FLExibility services enabled by interoperable digital platforms X Aggregated Industries
+  startDate: "2026-10-01"
+  url:
+    unit: /projects/FLEXIA
+  logo: flexia.jpg
+  partners:
+    - name: Maps Energy
+      url: https://mapsgroup.it/
+    - name: Consorzio Elettrico di Storo, Società Cooperativa | CEDIS
+      url: https://www.cedis.info/
+    - name: INNOVA Group S.r.l.
+      url: https://innovagroupitalia.it/
+    - name: HYDROALP S.r.l.
+      url: https://www.hydroalp.com/
+    - name: RINA Consulting S.p.A
+      url: https://www.rina.org/en
+    - name: FBK Sustainable Energy
+      url: https://energy.fbk.eu/

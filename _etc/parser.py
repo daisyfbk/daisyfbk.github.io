@@ -15,36 +15,89 @@ with open("known_names.json") as f:
 seen_iris_ids = []
 seen_generated_ids = []
 
-removed_chars_ids = [".", "+", ":", "&", "-", "?", " ", ";", ",", "'", "`", "(", ")", "{", "}"]
+removed_chars_ids = [
+    ".",
+    "+",
+    ":",
+    "&",
+    "-",
+    "?",
+    " ",
+    ";",
+    ",",
+    "'",
+    "`",
+    "(",
+    ")",
+    "{",
+    "}",
+]
 
 
 def generate_publication_id(data: dict):
     # citation['title'].replace(' ', '').replace(":", "").lower() + str(citation['year'])
-    return "iris_" + str(data['year']) + "_" + \
-            hashlib.md5(f"{data['title'].strip()}:::::{data['year']}:::::{data['doi'].strip() if 'doi' in data else data['title']}".encode('utf-8')).hexdigest()[:20]
+    return (
+        "iris_"
+        + str(data["year"])
+        + "_"
+        + hashlib.md5(
+            f"{data['title'].strip()}:::::{data['year']}:::::{data['doi'].strip() if 'doi' in data else data['title']}".encode(
+                "utf-8"
+            )
+        ).hexdigest()[:20]
+    )
 
 
 def remove_accents(input_str: str):
     # Remove accents from a given string
-    nfkd_form = unicodedata.normalize('NFKD', input_str)
-    only_ascii = nfkd_form.encode('ASCII', 'ignore')
-    return only_ascii.decode('ASCII').strip()
+    nfkd_form = unicodedata.normalize("NFKD", input_str)
+    only_ascii = nfkd_form.encode("ASCII", "ignore")
+    return only_ascii.decode("ASCII").strip()
 
 
 def sort_yamls(yamls: list[str]):
-     return sorted(yamls, key=lambda k: "".join(k.split("\n")[0].split(": ")[1:]))
+    return sorted(yamls, key=lambda k: "".join(k.split("\n")[0].split(": ")[1:]))
 
 
 def saner_journal_name(name: str):
     # Gets a name like IEEE TRANSACTIONS ON NETWORK AND SERVICE MANAGEMENT
     # and turns it into IEEE Transactions on Network and Service Management
-    uncapitalize = ["a of", "a on", "and", "by", "for", "in", "on", "to",
-                    "the", "you", "with", "without", "of", "over", "an", "a"]
-    acronyms = ["IEEE", "ICDCS", "WWW", "ICCCN", "ACM", "IEEE/IFIP",
-                "OSAPUBLISHING", "OSA", "IFIP", "IEEE", "EDGECOM", "GECON"]
+    uncapitalize = [
+        "a of",
+        "a on",
+        "and",
+        "by",
+        "for",
+        "in",
+        "on",
+        "to",
+        "the",
+        "you",
+        "with",
+        "without",
+        "of",
+        "over",
+        "an",
+        "a",
+    ]
+    acronyms = [
+        "IEEE",
+        "ICDCS",
+        "WWW",
+        "ICCCN",
+        "ACM",
+        "IEEE/IFIP",
+        "OSAPUBLISHING",
+        "OSA",
+        "IFIP",
+        "IEEE",
+        "EDGECOM",
+        "GECON",
+    ]
     parts = name.split(" ")
-    final_name = [parts[0].capitalize() if not parts[0].upper() in acronyms
-                  else parts[0].upper()]
+    final_name = [
+        parts[0].capitalize() if not parts[0].upper() in acronyms else parts[0].upper()
+    ]
     open_par = False
     for part in parts[1:]:
         if part.endswith(")"):
@@ -71,7 +124,7 @@ def generate_yaml(citation):
         print("Skipping empty citation")
         return
 
-    if citation['id_full'] in seen_iris_ids:
+    if citation["id_full"] in seen_iris_ids:
         # print("Skipping " + citation['id_full'] + " already seen")
         return
 
@@ -82,7 +135,12 @@ def generate_yaml(citation):
         # citation['title'] = citation['title'] + citation['id_full']
         # generated_id = generate_publication_id(citation)
         # if generated_id in seen_generated_ids:
-        print("There is a hash collision. (hash: " + generated_id + "); citation: " + citation['title'])
+        print(
+            "There is a hash collision. (hash: "
+            + generated_id
+            + "); citation: "
+            + citation["title"]
+        )
         return
         # else:
         #    citation['title'] = citation['title'][:-len(citation['id_full'])]
@@ -91,21 +149,29 @@ def generate_yaml(citation):
     if "conference" in citation and "journal" in citation:
         raise RuntimeError("You cannot have both conference and journal")
     elif "conference" in citation:
-        key = 'conference'
+        key = "conference"
     elif "journal" in citation:
-        key = 'journal'
+        key = "journal"
     else:
         raise RuntimeError("You should have either conference or journal")
 
     cid = filter(lambda x: x not in removed_chars_ids, citation[key])
     cid = "".join(cid)
-    cid = remove_accents(cid).replace(' ', '')\
-        .strip().lower()\
-        .replace('\\', '').replace('/', '').replace('.', '').replace('abstract', '')\
-        .replace('proceedingsofthe', '')\
-        .replace('proceedingsof', '').replace('proceedings', '')\
-        .replace('  ', ' ')
-    
+    cid = (
+        remove_accents(cid)
+        .replace(" ", "")
+        .strip()
+        .lower()
+        .replace("\\", "")
+        .replace("/", "")
+        .replace(".", "")
+        .replace("abstract", "")
+        .replace("proceedingsofthe", "")
+        .replace("proceedingsof", "")
+        .replace("proceedings", "")
+        .replace("  ", " ")
+    )
+
     __name = saner_journal_name(citation[key])
     __type = key
 
@@ -114,13 +180,19 @@ def generate_yaml(citation):
         __name = __name[:-1]
 
     if __name.startswith("Proceedings"):
-        __name = __name.replace("Proceedings -", "")\
-                    .replace("Proceedings of the", "")\
-                    .replace("Proceedings of", "")\
-                    .replace("Proceedings", "")\
-                    .strip()
+        __name = (
+            __name.replace("Proceedings -", "")
+            .replace("Proceedings of the", "")
+            .replace("Proceedings of", "")
+            .replace("Proceedings", "")
+            .strip()
+        )
         if __name.split(" ")[0][0].upper() != __name.split(" ")[0][0]:
-            __name = __name.split(" ")[0].capitalize() + " " + " ".join(__name.split(" ")[1:])
+            __name = (
+                __name.split(" ")[0].capitalize()
+                + " "
+                + " ".join(__name.split(" ")[1:])
+            )
         proc = "Proceedings of " + __name
     else:
         proc = None
@@ -140,29 +212,29 @@ def generate_yaml(citation):
             "url": "",
         }
         if __type == "conference":
-            destinations[cid]['proceedings'] = proc
-            destinations[cid]['startDate'] = citation['year']
-            destinations[cid]['endDate'] = citation['year']
-            destinations[cid]['location'] = ""
+            destinations[cid]["proceedings"] = proc
+            destinations[cid]["startDate"] = citation["year"]
+            destinations[cid]["endDate"] = citation["year"]
+            destinations[cid]["location"] = ""
 
     yaml_output = []
-    yaml_output.append('- id: ' + generated_id)
-    yaml_output.append('  id_iris: ' + citation['id_iris'])
-    yaml_output.append('  title: "' + citation['title'] + '"')
-    yaml_output.append('  authors:')
-    for author in citation['authors']:
-        yaml_output.append('    - ' + author)
+    yaml_output.append("- id: " + generated_id)
+    yaml_output.append("  id_iris: " + citation["id_iris"])
+    yaml_output.append('  title: "' + citation["title"] + '"')
+    yaml_output.append("  authors:")
+    for author in citation["authors"]:
+        yaml_output.append("    - " + author)
     if "abstract" in citation:
-        yaml_output.append('  abstract: >')
-        yaml_output.append('    ' + citation['abstract'])
-    yaml_output.append('  destination: ' + cid)
-    yaml_output.append('  year: ' + str(citation['year']))
+        yaml_output.append("  abstract: >")
+        yaml_output.append("    " + citation["abstract"])
+    yaml_output.append("  destination: " + cid)
+    yaml_output.append("  year: " + str(citation["year"]))
     if "doi" in citation:
-        yaml_output.append('  doi: ' + citation['doi'])
+        yaml_output.append("  doi: " + citation["doi"])
 
-    seen_iris_ids.append(citation['id_full'])
+    seen_iris_ids.append(citation["id_full"])
 
-    return '\n'.join(yaml_output)
+    return "\n".join(yaml_output)
 
 
 def parse_bibtex(bibtex):
@@ -170,13 +242,13 @@ def parse_bibtex(bibtex):
     citation = {}
     yamls = []
 
-    for line in bibtex.split('\n'):
+    for line in bibtex.split("\n"):
         if line.strip() == "}":
             y = generate_yaml(citation)
             if y is not None:
                 yamls.append(y)
             continue
-        if line.startswith('@'):
+        if line.startswith("@"):
             citation = {}
             continue
         if "=" not in line:
@@ -187,14 +259,14 @@ def parse_bibtex(bibtex):
                 citation["id_iris"] = line.strip().split("_")[1]
                 continue
         # Parse the line through regex
-        regex = re.search(r' *([^=]+) *= *{(.*)},?', line)
+        regex = re.search(r" *([^=]+) *= *{(.*)},?", line)
 
         if regex is None:
             continue
 
         key, value = regex.groups()
         key = key.lower().strip()
-        if key == 'author':
+        if key == "author":
             # Split authors and format their names
             # Possible formats:
             # 	author = {Savi, Marco and Pederzolli, Federico and Siracusa, Domenico},
@@ -214,29 +286,29 @@ def parse_bibtex(bibtex):
                 if shortened_name not in global_authors:
                     global_authors[shortened_name] = (name, surname)
                 authors.append(shortened_name)
-            citation['authors'] = authors
-        elif key == 'title':
-            citation['title'] = value.strip()
-        elif key == 'year':
+            citation["authors"] = authors
+        elif key == "title":
+            citation["title"] = value.strip()
+        elif key == "year":
             if int(value) > 3000:
                 value = datetime.datetime.now().year
-            citation['year'] = int(value)
-        elif key == 'abstract':
-            citation['abstract'] = value.strip()
-        elif key == 'doi':
-            citation['doi'] = value.strip()
-        elif key == 'pages':
-            citation['pages'] = value.strip()
-        elif key == 'number':
-            citation['number'] = int(value)
-        elif key == 'journal':
-            citation['journal'] = value.strip().replace(": ", " ")
-        elif key == 'booktitle':
-            citation['conference'] = value.strip().replace(": ", " ")
-        elif key == 'volume':
-            citation['volume'] = value.strip()
-        elif key == 'url':
-            citation['url'] = value.strip()
+            citation["year"] = int(value)
+        elif key == "abstract":
+            citation["abstract"] = value.strip()
+        elif key == "doi":
+            citation["doi"] = value.strip()
+        elif key == "pages":
+            citation["pages"] = value.strip()
+        elif key == "number":
+            citation["number"] = int(value)
+        elif key == "journal":
+            citation["journal"] = value.strip().replace(": ", " ")
+        elif key == "booktitle":
+            citation["conference"] = value.strip().replace(": ", " ")
+        elif key == "volume":
+            citation["volume"] = value.strip()
+        elif key == "url":
+            citation["url"] = value.strip()
 
     return sort_yamls(yamls)
 
@@ -261,24 +333,37 @@ def main():
 
     yamls = parse_bibtex(data)
     yamls.reverse()
-    with open('tmp/publications_generated.yml', 'w') as publications:
+    with open("tmp/publications_generated.yml", "w") as publications:
         for _, y in enumerate(yamls):
             print(y, file=publications)
             print("\n", file=publications)
 
-    registered_authors = os.popen("cat ../_data/people.yml | grep \"#--#--#--#--#--#\" -B 100000 | yq eval '.[] | [.name,.surname] | join(\"\")' | sed \"s/ //g\"").read().splitlines()
+    registered_authors = (
+        os.popen(
+            'cat ../_data/people.yml | grep "#--#--#--#--#--#" -B 100000 | yq \'.[] | [.name,.surname] | join("")\' | sed "s/ //g" | sed \'s/"//g\''
+        )
+        .read()
+        .splitlines()
+    )
 
     tbp = []
     for k in global_authors:
         if k in registered_authors:
             continue
         tbp.append(
-            "- id: " + k + "\n" +
-            "  name: " + global_authors[k][0].replace("-", " ") + "\n" +
-            "  surname: " + global_authors[k][1] + "\n")
+            "- id: "
+            + k
+            + "\n"
+            + "  name: "
+            + global_authors[k][0].replace("-", " ")
+            + "\n"
+            + "  surname: "
+            + global_authors[k][1]
+            + "\n"
+        )
 
     tbp = sort_yamls(tbp)
-    with open('tmp/people_generated.yml', 'w') as people:
+    with open("tmp/people_generated.yml", "w") as people:
         for i in tbp:
             print(i, file=people)
 
@@ -288,28 +373,28 @@ def main():
         v = destinations[k]
         name = v["name"]
         __type = v["type"]
-        data = "- id: " + k + "\n" + \
-            "  name: " + name + "\n" + \
-            "  type: " + __type + "\n"
+        data = (
+            "- id: " + k + "\n" + "  name: " + name + "\n" + "  type: " + __type + "\n"
+        )
 
         if v["url"] is not None and v["url"] != "":
             data += "  url: " + v["url"] + "\n"
 
-        if __type == 'conference':
+        if __type == "conference":
             if v["acronym"] is not None and v["acronym"] != "":
                 data += "  acronym: " + v["acronym"] + "\n"
             if v["proceedings"] is not None and v["proceedings"] != "":
                 data += "  proceedings: " + v["proceedings"] + "\n"
             if v["location"] is not None and v["location"] != "":
                 data += "  location: " + v["location"] + "\n"
-            
+
         tbp.append(data)
     tbp = sort_yamls(tbp)
 
-    with open('tmp/destinations_generated.yml', 'w') as destinationsf:
+    with open("tmp/destinations_generated.yml", "w") as destinationsf:
         for i in tbp:
             print(i, file=destinationsf)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

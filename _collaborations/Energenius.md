@@ -1,3 +1,0 @@
----
-collaboration: Energenius
----

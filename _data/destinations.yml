@@ -223,6 +223,11 @@
   type: conference
   proceedings: Proceedings of 21st International Conference on Information and Communications Security (ICICS 2019)
 
+- id: 21stinternationalconferenceonnetworkandservicemanagement
+  name: 21st International Conference on Network and Service Management
+  type: conference
+  proceedings: Proceedings of 21st International Conference on Network and Service Management
+
 - id: 27thconferenceoninnovationincloudsinternetandnetworks
   name: 27th Conference on Innovation in Clouds, Internet and Networks
   type: conference

@@ -8,14 +8,14 @@
     unit: /collaborations/GARR
     external: https://www.garr.it/
 
-- id: Energenius
-  name: Energenius
+- id: MAPSEnergy
+  name: MAPS Energy
   startYear: 2018
-  description: Start-up focused on energy optimization solutions
-  logo: energius.png
+  description: Maps Group company focused on the digital energy market
+  logo: mapsenergy.jpg
   url:
-    unit: /collaborations/Energenius
-    external: https://www.energenius.it/
+    unit: /collaborations/MAPSEnergy
+    external: https://energy.mapsgroup.it/
 
 - id: QUEENS
   name: Queen's University Belfast
