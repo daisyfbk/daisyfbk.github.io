@@ -184,3 +184,16 @@
       url: https://www.rina.org/en
     - name: FBK Sustainable Energy
       url: https://energy.fbk.eu/
+
+- id: AI4PCE
+  title: AI4PCE
+  titleAddon: Artificial Intelligence for Path Computation Element
+  startDate: "2026-04-01"
+  endDate: "2026-12-31"
+  url:
+    unit: /projects/AI4PCE
+  partners:
+    - name: FBK SaFEWaRe
+      url: https://safeware.fbk.eu
+    - name: Cisco Systems Inc.
+      url: https://cisco.com
