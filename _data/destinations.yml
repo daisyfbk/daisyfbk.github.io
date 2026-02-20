@@ -218,6 +218,11 @@
   type: conference
   proceedings: Proceedings of 2024 IEEE Symposium on Computers and Communications (ISCC)
 
+- id: 2025artificialintelligencemodelsandsystemssymposiumaimsandfoundationsoflearningandlanguagemodelsfllm
+  name: 2025 Artificial Intelligence Models and Systems Symposium (AIMS) and Foundations of Learning and Language Models (FLLM)
+  type: conference
+  proceedings: Proceedings of 2025 Artificial Intelligence Models and Systems Symposium (AIMS) and Foundations of Learning and Language Models (FLLM)
+
 - id: 21stinternationalconferenceoninformationandcommunicationssecurityicics2019
   name: 21st International Conference on Information and Communications Security (ICICS 2019)
   type: conference
@@ -603,6 +608,10 @@
 
 - id: procofthe2025ieeeeuropeansymposiumonsecurityandprivacyworkshopseurospw
   name: Proc. of the 2025 IEEE European Symposium on Security and Privacy Workshops (EuroS&PW)
+  type: conference
+
+- id: procofthe3rdinternationalconferenceonfoundationandlargelanguagemodelsfllm
+  name: Proc. of the 3rd International Conference on Foundation and Large Language Models (FLLM)
   type: conference
 
 - id: procspie9009nextgenerationopticalcommunicationcomponentssubsystemsandsystemsiii

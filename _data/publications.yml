@@ -41,6 +41,20 @@
   doi: 10.23919/cnsm67658.2025.11297559
 
 
+- id: iris_2025_f2dee03ebee676c2eeef
+  id_iris: 367147,
+  title: "Adaptive Federated Learning with Functional Encryption: A Comparison of Classical and Quantum-safe Options"
+  authors:
+    - EnricoSorbera
+    - FedericaZanetti
+    - GiacomoBrandi
+    - AlessandroTomasi
+    - RobertoDoriguzziCorin
+    - SilvioRanise
+  destination: 2025artificialintelligencemodelsandsystemssymposiumaimsandfoundationsoflearningandlanguagemodelsfllm
+  year: 2025
+
+
 - id: iris_2025_ee27c892d9762dd36c1f
   id_iris: 357329,
   title: "DiversityOne: A Multi-Country Smartphone Sensor Dataset for Everyday Life Behavior Modeling"
@@ -126,6 +140,20 @@
   destination: procofthe2025ieeeeuropeansymposiumonsecurityandprivacyworkshopseurospw
   year: 2025
   doi: 10.1109/EuroSPW67616.2025.00077
+
+
+- id: iris_2025_292410c941edc5932843
+  id_iris: 367207,
+  title: "CPAD: Constraint-Projected Adversarial Attack for Dependable Network Intrusion Detection"
+  authors:
+    - MichaelKevinNtakoKoungni
+    - DomenicoSiracusa
+    - RobertoDoriguzziCorin
+  abstract: >
+    Machine-learning Network Intrusion Detection Systems (NIDSs) are increasingly used to detect network attacks, but they remain vulnerable to Adversarial Machine Learning (AML) attacks that subtly perturb traffic to cause misclassification. Understanding and testing these attacks is essential for deploying reliable NIDS in real networks. However, existing AML attack generators, often developed for other application domains, frequently violate network constraints or alter the malicious functionality of traffic, limiting their usefulness for realistic evaluation. To address these limitations, we propose Constraint-Projected Adversarial Attack (CPAD), a method that preserves both validity and maliciousness while inducing evasion. The main goal of CPAD is to allow cybersecurity analysts and practitioners to assess the robustness of their NIDSs against adversarially perturbed network attacks. CPAD partitions features into perturbable and non-perturbable sets, iteratively targets the most influential features, and projects perturbations back into the allowable distribution and constraint space so samples remain realistic and functional. Evaluated on Brute Force, DDoS, DoS, and Bot attacks using a deep model, CPAD produces realistic adversarial samples that retain attack characteristics and successfully evade detection, enabling more faithful robustness assessment of NIDSs.
+  destination: procofthe3rdinternationalconferenceonfoundationandlargelanguagemodelsfllm
+  year: 2025
+  doi: 10.1109/fllm67465.2025.11391031
 
 
 - id: iris_2025_220419fbe6e1d3d85d0d

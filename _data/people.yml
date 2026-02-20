@@ -569,6 +569,10 @@
   name:  Alessandro
   surname: Lieto
 
+- id: AlessandroTomasi
+  name:  Alessandro
+  surname: Tomasi
+
 - id: AlethiaHume
   name:  Alethia
   surname: Hume
@@ -925,6 +929,10 @@
   name:  Enrico
   surname: Pezzano
 
+- id: EnricoSorbera
+  name:  Enrico
+  surname: Sorbera
+
 - id: F.Cugini
   name:  F.
   surname: Cugini
@@ -968,6 +976,10 @@
 - id: FaustoGiunchiglia
   name:  Fausto
   surname: Giunchiglia
+
+- id: FedericaZanetti
+  name:  Federica
+  surname: Zanetti
 
 - id: FedericoMicheleFacca
   name:  Federico Michele
@@ -1064,6 +1076,10 @@
 - id: GiacomoBenedetti
   name:  Giacomo
   surname: Benedetti
+
+- id: GiacomoBrandi
+  name:  Giacomo
+  surname: Brandi
 
 - id: GiacomoVerticale
   name:  Giacomo
