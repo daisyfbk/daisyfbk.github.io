@@ -1,3 +1,11 @@
+- id: X-WAD
+  name: "X-WAD"
+  nameAddon: "eXplainable Web Anomaly Detection tool"
+  description: "X-WAD (eXplainable Web Anomaly Detection) is a tool used to detect and explain security anomalies in web traffic using Transformer-based language models."
+  logo: xwad.jpg
+  urlDocumentation:
+    unit: /tools/xwad
+
 - id: HoneyPeople
   name: "HoneyPeople"
   nameAddon: "A user emulation engine for Cyber Deception"

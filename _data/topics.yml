@@ -19,11 +19,11 @@
   image: ServSecOrchestration.jpg
   order: 3
 
-- id: Decepto
-  title: Decepto
+- id: X-WAD
+  title: X-WAD
   category: spotlight
-  url: /tools/Decepto
-  image: Decepto.png
+  url: /tools/xwad
+  image: xwad.jpg
   order: 2
 
 - id: FLAD
@@ -39,4 +39,3 @@
   url: /tools/kubeDelphi
   image: kubeDelphi.png
   order: 5
-
