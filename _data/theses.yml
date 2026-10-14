@@ -1,3 +1,19 @@
+- id: LorenzoFasol_M
+  author: LorenzoFasol
+  type: M
+  title: "Detecting Internal GPS Data Manipulation Attacks in Maritime Navigation Systems"
+  institution: University of Trento
+  year: 2026
+  supervisor: RobertoDoriguzziCorin
+
+- id: EliaZiviani_M
+  author: EliaZiviani
+  type: M
+  title: "ARTS - AML-Robust C2 Detection in TLS 1.3"
+  institution: University of Trento
+  year: 2026
+  supervisor: RobertoDoriguzziCorin
+
 - id: MatteoBordignon_M
   author: MatteoBordignon
   type: M
@@ -97,7 +113,7 @@
   institution: University of Genoa
   year: 2024
   supervisor: DomenicoSiracusa
-  co-supervisor: 
+  co-supervisor:
     - RobertoDoriguzziCorin
     - LucaOneto
     - AlessandroArmando
@@ -145,7 +161,7 @@
     Critical Infrastructures (CIs) such as water treatment plants, power grids and telecommunication networks are critical to the daily activities and well-being of our society. Disruption of such CIs would have catastrophic consequences for public safety and the national economy. Hence, these infrastructures have become major targets in the upsurge of cyberattacks. Defending against such attacks often depends on an arsenal of cyber-defence tools, including Machine Learning (ML)-based Anomaly Detection Systems (ADSs). These detection systems use ML models to learn the profile of the normal behaviour of a CI and classify deviations that go well beyond the normality profile as anomalies. [...]
   cycle: XXXIV
   doi: 10.15168/11572_352463
-  
+
 - id: RobertoDoriguzziCorin_P
   author: RobertoDoriguzziCorin
   type: P
@@ -153,8 +169,8 @@
   institution: University of Bologna
   year: 2020
   supervisor:
-   - FrancoCallegati
-   - DomenicoSiracusa
+    - FrancoCallegati
+    - DomenicoSiracusa
   cycle: XXXII
   doi: 10.6092/unibo/amsdottorato/9208
 
@@ -207,7 +223,7 @@
   institution: University of Trento
   year: 2023
   supervisor: DomenicoSiracusa
-  
+
 - id: MatteoCaliandro_M
   author: MatteoCaliandro
   type: M
@@ -217,7 +233,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: FrancescomariaFaticanti
 
-- id: ClaudioFacchinetti_M 
+- id: ClaudioFacchinetti_M
   author: ClaudioFacchinetti
   type: M
   title: A Resource-Aware Decoy Allocation Strategy for Cyber Deception in the Cloud
@@ -226,7 +242,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: MarcoZambianco
 
-- id: MartinaLanzi_M 
+- id: MartinaLanzi_M
   author: MartinaLanzi
   type: M
   title: Adversarial DDoS Attack Detection with Multimodal Deep Learning
@@ -244,7 +260,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: GianniAntichi
 
-- id: RiccardoMicheletto_M 
+- id: RiccardoMicheletto_M
   author: RiccardoMicheletto
   type: M
   title: A Cost-Aware Optimization Algorithm for Time-Constrained Applications in Hybrid Clouds
@@ -253,7 +269,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: FrancescomariaFaticanti
 
-- id: ValentinoArmani_M 
+- id: ValentinoArmani_M
   author: ValentinoArmani
   type: M
   title: A Cost-Effective Workload Allocation Strategy for Cloud-Native Edge Services
@@ -262,7 +278,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: FrancescomariaFaticanti
 
-- id: DavideTessarolo_M 
+- id: DavideTessarolo_M
   author: DavideTessarolo
   type: M
   title: Dynamic Offloading of Robotic Workloads Under Latency Constraints
@@ -270,7 +286,7 @@
   year: 2021
   supervisor: DomenicoSiracusa
 
-- id: AndreaFregonese_M 
+- id: AndreaFregonese_M
   author: AndreaFregonese
   type: M
   title: Federated Learning of a Deep Neural Network for DDoS Detection Trained with Non-IID Data
@@ -279,7 +295,7 @@
   supervisor: DomenicoSiracusa
   co-supervisor: RobertoDoriguzziCorin
 
-- id: MarianAlexandruDiaconu_M 
+- id: MarianAlexandruDiaconu_M
   author: MarianAlexandruDiaconu
   type: M
   title: A Distributed Serverless Caching System for Small Objects Management
@@ -287,7 +303,7 @@
   year: 2021
   supervisor: DomenicoSiracusa
 
-- id: RiccardoCapraro_M 
+- id: RiccardoCapraro_M
   author: RiccardoCapraro
   type: M
   title: Service-Aware Autoscaling of Cloud-Native Workloads
@@ -295,7 +311,7 @@
   year: 2021
   supervisor: DomenicoSiracusa
 
-- id: StefanoSetti_M 
+- id: StefanoSetti_M
   author: StefanoSetti
   type: M
   title: Implementing a Federated Learning Technique for DDoS Detection
