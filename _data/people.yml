@@ -282,6 +282,12 @@
   email: psabel@fbk.eu
   usernameFBK: psabel
 
+- id: CarlottaCazzolli
+  name: Carlotta
+  surname: Cazzolli
+  email: ccazzolli@fbk.eu
+  usernameFBK: ccazzolli
+
 - id: EnricoCarnelos
   name: Enrico
   surname: Carnelos
