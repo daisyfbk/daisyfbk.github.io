@@ -10,6 +10,7 @@ links:
     value: lorenzo-fasol-472377257
 ---
 
-Lorenzo Fasol is currently a first-year Master's Degree student in Computer Science with a specialization in Cybersecurity, following the completion of his Bachelor's Degree in Computer, Communication and Electronic Engineering, both at the University of Trento.
+Lorenzo Fasol is currently a PhD Student in Information Engineering and Computer Science at the University of Trento, Italy, with a grant funded by Fondazione Bruno Kessler, Italy. He received his BSc in Computer, Communication and Electronic Engineering and his MSc in Computer Science from the University of Trento, Italy.
 
-His work as a software developer focuses on developing optimization algorithms for cluster environments and integrating AI solutions into cybersecurity systems.
+He worked on developing optimization algorithms for cluster environments and integrating AI solutions into cybersecurity systems.
+His Master’s thesis, carried out at Fondazione Bruno Kessler in collaboration with Fincantieri, presented G-MAT, an unsupervised deep-learning framework that detects internal manipulation of a ship’s GPS data by checking the reported position against the vessel’s physical motion, and evaluated its robustness across different sea states.
