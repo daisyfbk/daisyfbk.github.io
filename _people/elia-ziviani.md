@@ -8,5 +8,5 @@ links:
     value: elia-ziviani-8b9187287
 ---
 
-Elia Ziviani is currently a second-year Cybersecurity track student in the Master’s Degree program in Computer Science at the University of Trento. He previously earned his Bachelor’s degree in Computer, Communication, and Electronic Engineering, also at the University of Trento.
-
+Elia is currently a Software Developer in the DAISY unit at Fondazione Bruno Kessler’s (FBK) Cybersecurity Center, focusing on the application of AI solutions to cybersecurity.
+Previously, he earned his Bachelor’s degree in Computer, Communication, and Electronic Engineering and his Master's degree in Computer Science (Cybersecurity track) from the University of Trento.
