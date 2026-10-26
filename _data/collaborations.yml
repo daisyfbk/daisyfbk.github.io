@@ -54,6 +54,7 @@
 - id: cherrychain
   name: CherryChain
   startYear: 2025
+  endYear: 2026
   description: FinTech company located in Trento, Italy.
   logo: cherrychain.jpg
   url:

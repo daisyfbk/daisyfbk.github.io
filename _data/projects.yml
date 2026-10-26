@@ -5,6 +5,7 @@
     unit: /projects/SERICS
   logo: SERICS.png
   startDate: "2023-01-01"
+  endDate: "2026-01-31"
   partners:
     - name: Universita' di Genova
     - name: Consiglio Nazionale delle Ricerche
@@ -21,6 +22,7 @@
     unit: /projects/HERO
   logo: HERO.png
   startDate: "2025-03-06"
+  endDate: "2026-09-15"
   partners:
     - name: Energenius
     - name: Ape Servizi
@@ -158,6 +160,7 @@
   title: DAO Fidelity and CyberSecurity
   titleAddon: Integrating AI and OpenTelemetry in the DAO Platform
   startDate: "2025-09-03"
+  endDate: "2026-03-31"
   url:
     unit: /projects/DAOFidelity
   partners:
@@ -168,6 +171,7 @@
   title: FLEXIA
   titleAddon: Local FLExibility services enabled by interoperable digital platforms X Aggregated Industries
   startDate: "2026-10-01"
+  endDate: "2027-12-31"
   url:
     unit: /projects/FLEXIA
   logo: flexia.jpg

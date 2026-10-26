@@ -7,12 +7,11 @@
   startYear: 2023
   links:
     - name: 2023-2024
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2023/50328_643270_96291/2011/50328/10117?coorte=2023&schemaid=8484"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2023/10117/insegnamenti/2023/50328_643270_96291/2011/50328?coorte=2023&schemaid=8488"
     - name: 2024-2025
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2024/50174_642668_96291/2023/50175/10756?annoOrdinamento=2023"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2024/10117/insegnamenti/2024/50540_644835_96291/2011/50540?coorte=2024&schemaid=9163"
     - name: 2025-2026
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2025/50880_650697_96291/2025/50880/10883?annoOrdinamento=2025"
-
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2025/10883/insegnamenti/2025/50880_650697_96291/2025/50880?coorte=2025&schemaid=9809"
 
 - id: FogAndCloud
   name: Fog and Cloud Computing
@@ -27,15 +26,17 @@
   startYear: 2019
   links:
     - name: 2020-2021
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2020/93765/2011/9999/10117?coorte=2020"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2020/10117/insegnamenti/2020/49719_640144_93765/2011/49718?coorte=2020&schemaid=6968"
     - name: 2021-2022
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2021/93765/2011/9999/10117?coorte=2021"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2020/10712/insegnamenti/2021/49516_634212_93765/2019/49516?coorte=2020"
     - name: 2022-2023
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2022/93765/2011/9999/10117?coorte=2022"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2020/10114/insegnamenti/2022/49682_628476_93765/2008/49677?coorte=2020"
     - name: 2023-2024
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2023/93765/2011/9999/10117?coorte=2023"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2023/10117/insegnamenti/2023/50326_635677_93765/2011/50328?coorte=2023&schemaid=8488"
     - name: 2024-2025
-      url: "https://unitn.coursecatalogue.cineca.it/insegnamenti/2024/50538_644822_93765/2011/50539/10117?coorte=2024"
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2024/10756/insegnamenti/2024/50523_647096_93765/2023/50523?coorte=2024&schemaid=9180"
+    - name: 2025-2026
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2025/10885/insegnamenti/2025/50876_650886_93765/2025/50876?coorte=2025&schemaid=9970"
 
 - id: NetworkIntrusionDetection
   name: Network Intrusion Detection with Deep Learning
