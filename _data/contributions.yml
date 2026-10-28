@@ -1,0 +1,7 @@
+- id: FLADFlower
+  people:
+    - RobertoDoriguzziCorin
+    - SilvioCretti
+  peopleOrder: surname
+  title: FLAD is now part of Flower as a baseline
+  logo: /assets/areas/contributions/FLAD.png

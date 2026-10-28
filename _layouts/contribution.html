@@ -1,0 +1,32 @@
+---
+layout: page
+---
+
+{% assign contributionFromId = site.data.contributions | where: "id", page.contribution %}
+{% if contributionFromId.size > 0 %}
+    {% assign contribution = contributionFromId | first %}
+{% else %}
+    {% assign contribution = nil %}
+{% endif %}
+
+<span id="set-title">{{ contribution.title }}</span>
+
+<div class="columns is-multiline">
+
+    <div class="column is-12">
+        {% if contribution.logo %}
+            {% capture contributionImage %}
+              {% include collection-logo.html element=contribution%}
+            {% endcapture %}
+            {% if contributionLogo contains ".svg" %}
+                <svg class="logo pull-right">
+                    <use href="{{ contributionLogo }}"/>
+                </svg>
+            {% else %}
+                <img class="logo pull-right" src="{{ contributionImage }}" />
+            {% endif %}
+        {% endif %}
+        {{ content }}
+    </div>
+
+</div>

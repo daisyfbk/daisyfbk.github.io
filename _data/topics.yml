@@ -1,3 +1,4 @@
+# Research Areas
 - id: ThreatDetection
   title: Dependable AI-driven Threat and Anomaly Detection
   category: topic
@@ -19,6 +20,7 @@
   image: ServSecOrchestration.jpg
   order: 3
 
+# Tools
 - id: X-WAD
   title: X-WAD
   category: spotlight
@@ -39,3 +41,11 @@
   url: /tools/kubeDelphi
   image: kubeDelphi.png
   order: 5
+
+# Contributions
+- id: FLADFlower
+  title: FLAD is now part of Flower as a baseline
+  category: contribution
+  url: /contributions/FLADFlower
+  image: FLAD.png
+  order: 1
