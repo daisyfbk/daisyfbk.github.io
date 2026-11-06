@@ -1,0 +1,93 @@
+{::nomarkdown}
+{% assign cols = include.cols | default: "one-quarter" %}
+{% assign details = include.details | default: "" %}
+{% assign sort_by = include.sort_by | default: "name" %}
+{% assign source = include.source %}
+
+{% assign sort_natural = true %}
+{% if include.sort_natural == false %}
+    {% assign sort_natural = false %}
+{% endif %}
+
+{% assign sort_reverse = false %}
+{% if include.sort_reverse == true %}
+    {% assign sort_reverse = true %}
+{% endif %}
+
+{% if source and source.size > 0 %}
+    {% assign contributions = "" | split: "" %}
+
+    {% for item in source %}
+        {% if item.id %}
+            {% assign match = site.data.contributions | where: "id", item.id | first %}
+        {% else %}
+            {% assign match = site.data.contributions | where: "id", item | first %}
+        {% endif %}
+        {% if match %}
+            {% assign contributions = contributions | push: match %}
+        {% endif %}
+    {% endfor %}
+
+    {% if sort != "none" %}
+        {% if sort_natural %}
+            {% assign contributions = contributions | sort_natural: sort_by %}
+        {% else %}
+            {% assign contributions = contributions | sort: sort_by %}
+        {% endif %}
+        {% if sort_reverse %}
+            {% assign contributions = contributions | reverse %}
+        {% endif %}
+    {% endif %}
+
+    <div class="columns is-multiline">
+
+      {% for contribution in contributions %}
+      <div class="column topic is-4-desktop is-6-tablet" data-tags="{{ contribution.units | join: "|" }}">
+        {% if contribution.url %}
+          <a class="no-decoration" href="{{ contribution.url }}">
+        {% endif %}
+        <div class="card topic">
+          <div class="card-image">
+            <figure class="image ml-0 mr-l">
+              
+              {% if contribution.communityLogo %}
+                <div>
+                  {% if contribution.communityLogo contains ".svg" %}
+                    <svg style="width:432px; height:288px" />
+                      <use href="{{ contribution.communityLogo }}"/>
+                    </svg>
+                {% else %}
+                  <img src="{{ site.baseurl }}/assets/areas/contributions/{{ contribution.communityLogo }}"  alt="{{ topic.title }}" style="width:432px; height:288px" />
+                {% endif %}
+              {% endif %}
+
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="units">
+              {% if contribution.units %}
+                {% assign units = contribution.units | sort %}
+                {% for tag in units %}
+                  {% assign currentUnit = site.data.units | where: "id", tag | first %}
+                  {% if currentUnit and currentUnit.size > 0 %}
+                  <span class="tag tag-{{ currentUnit.id }}" style="background-color: {{ currentUnit.color | default: 'default' }};">
+                    <b>{{ currentUnit.acronym | default: "" }}</b>
+                  </span>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+            <p class="title is-4">{{ contribution.community }}</p>
+            <hr />
+            <p class="subtitle is-4 addon"><medium>{{ contribution.description }}</medium></p>
+          </div>
+        </div>
+        {% if contribution.url %}
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div> 
+
+{% endif %} 
+{:/nomarkdown}

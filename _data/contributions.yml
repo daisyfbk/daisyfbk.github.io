@@ -1,7 +1,15 @@
 - id: FLADFlower
-  people:
-    - RobertoDoriguzziCorin
-    - SilvioCretti
-  peopleOrder: surname
+  community: Flower
   title: FLAD is now part of Flower as a baseline
-  logo: /assets/areas/contributions/FLAD.png
+  communityLogo: FLAD.png
+  daisyLogo: tools/FLAD.png
+  url: /contributions/FLADFlower
+  description: test123
+
+- id: HoneyPeopleRHC
+  community: Red Hot Cyber (RHC)
+  title: Social Engineering Challenges to Red Hot Cyber CTF
+  daisyLogo: tools/HONEYPEOPLE.png
+  communityLogo: rhc.jpg
+  url: /contributions/HoneyPeopleRHC
+  description: test 123

@@ -49,3 +49,10 @@
   url: /contributions/FLADFlower
   image: FLAD.png
   order: 1
+
+- id: HoneyPeopleRHC
+  title: Social Engineering Challenges to Red Hot Cyber CTF
+  category: contribution
+  url: /contributions/HoneyPeopleRHC
+  image: rhc.jpg
+  order: 1

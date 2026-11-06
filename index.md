@@ -27,14 +27,14 @@ The DAISY unit lies within the [Cybersecurity center](https://cs.fbk.eu/) in [Fo
 ## Research Areas
 
 {% assign researchAreas = site.data.topics | where_exp: "topic", "topic.category == 'topic'" %}
-{% include list-topics.html source=researchAreas sort_by="order" sort_natural="false" %}
+{% include list-topics.html source=researchAreas sort_by="order" sort_natural=false %}
 
 ## In the Spotlight
 
 {% assign researchSpotlights = site.data.topics | where_exp: "topic", "topic.category == 'spotlight'" %}
-{% include list-topics.html source=researchSpotlights sort_by="order" sort_natural="false" %}
+{% include list-topics.html source=researchSpotlights sort_by="order" sort_natural=false %}
 
 ## Open Community Contributions
 
-{% assign contributions = site.data.topics | where_exp: "topic", "topic.category == 'contribution'" %}
-{% include list-topics.html source=contributions sort_by="order" sort_natural="false" %}
+{% assign contributions = site.data.contributions %}
+{% include list-contributions.html source=contributions sort_by="order" sort_natural=false %}
