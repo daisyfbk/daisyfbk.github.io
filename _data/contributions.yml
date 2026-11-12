@@ -1,0 +1,8 @@
+- id: HoneyPeopleRHC
+  community: Red Hot Cyber (RHC)
+  title: Social Engineering Challenges at the Red Hot Cyber CTF
+  daisyLogo: tools/HONEYPEOPLE.png
+  communityLogo: rhc.jpg
+  url: /contributions/HoneyPeopleRHC
+  description: During the 2025 and 2026 CTF editions, DAISY developed fictional corporate scenarios populated by AI-driven characters that participants could interact with to solve challenges.
+  order: 2

@@ -1,0 +1,47 @@
+---
+layout: page
+---
+
+{% assign contributionFromId = site.data.contributions | where: "id", page.contribution %}
+{% if contributionFromId.size > 0 %}
+    {% assign contribution = contributionFromId | first %}
+{% else %}
+    {% assign contribution = nil %}
+{% endif %}
+
+<span id="set-title">{{ contribution.title }}</span>
+
+<div class="columns is-multiline">
+
+    <div class="column is-12">
+      <div class="pull-right">
+        
+        {% if contribution.daisyLogo %}
+          <div>
+            {% if contribution.daisyLogo contains ".svg" %}
+                <svg class="logo"  style="max-width:300px; max-height:none"/>
+                    <use href="{{ contribution.daisyLogo }}"/>
+                </svg>
+            {% else %}
+                <img class="logo" src="{{ site.baseurl }}/assets/areas/{{ contribution.daisyLogo }}"  style="max-width:300px; max-height:none"/>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if contribution.communityLogo %}
+          <div>
+            {% if contribution.communityLogo contains ".svg" %}
+                <svg class="logo"  style="max-width:300px; max-height:none"/>
+                    <use href="{{ contribution.communityLogo }}"/>
+                </svg>
+            {% else %}
+                <img class="logo"  src="{{ site.baseurl }}/assets/areas/contributions/{{ contribution.communityLogo }}"  style="max-width:300px; max-height:none"/>
+            {% endif %}
+          </div>
+        {% endif %}
+        
+      </div>
+        {{ content }}
+    </div>
+
+</div>
