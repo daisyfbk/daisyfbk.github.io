@@ -5,4 +5,12 @@
   communityLogo: rhc.jpg
   url: /contributions/HoneyPeopleRHC
   description: During the 2025 and 2026 CTF editions, DAISY developed fictional corporate scenarios populated by AI-driven characters that participants could interact with to solve challenges.
+  order: 1
+
+- id: FLADFlower
+  community: "Flower"
+  title: "FLAD in Flower: Adaptive Learning for DDoS Attack Detection"
+  daisyLogo: tools/FLAD.png
+  url: /contributions/FLADFlower
+  description: The contributed baseline includes both an implementation of the FLAD strategy and the code needed to reproduce a portion of the experiments proposed in the FLAD paper.
   order: 2

@@ -228,6 +228,10 @@
   type: conference
   proceedings: Proceedings of 2025 3rd International Conference on Foundation and Large Language Models (FLLM)
 
+- id: 2026aeitinternationalannualconferenceaeit
+  name: 2026 Aeit International Annual Conference (AEIT)
+  type: conference
+
 - id: 21stinternationalconferenceoninformationandcommunicationssecurityicics2019
   name: 21st International Conference on Information and Communications Security (ICICS 2019)
   type: conference

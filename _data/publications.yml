@@ -55,6 +55,20 @@
   doi: 10.1109/tdsc.2025.3641311
 
 
+- id: iris_2026_0d83e29832da9b12770e
+  id_iris: 375487,
+  title: "Unlocking Thermal Flexibility: Cold Rooms as Virtual Batteries in the Food Industry"
+  authors:
+    - MatteoGerola
+    - MarceloDarioRodasBritez
+    - PietroBizzarri
+    - LorenzoNiccolai
+    - RobertoDoriguzziCorin
+  destination: 2026aeitinternationalannualconferenceaeit
+  year: 2026
+  doi: 10.23919/aeit72316.2026.11779388
+
+
 - id: iris_2026_05709840ce2d8f6279d8
   id_iris: 373807,
   title: "From Source Code to Kubernetes Manifests: Guiding LLMs with Structured Metadata"

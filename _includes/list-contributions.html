@@ -48,17 +48,22 @@
         {% endif %}
         <div class="card topic">
           <div class="card-image">
-            <figure class="image ml-0 mr-l">
               
               {% if contribution.communityLogo %}
-                <div>
+                <figure class="image ml-0 mr-l">
+
                   {% if contribution.communityLogo contains ".svg" %}
-                    <svg style="width:432px; height:288px" />
+                    <svg/>
                       <use href="{{ contribution.communityLogo }}"/>
                     </svg>
-                {% else %}
-                  <img src="{{ site.baseurl }}/assets/areas/contributions/{{ contribution.communityLogo }}"  alt="{{ topic.title }}" style="width:432px; height:288px" />
-                {% endif %}
+                  {% else %}
+                    <img src="{{ site.baseurl }}/assets/areas/contributions/{{ contribution.communityLogo }}"  alt="{{ contribution.title }}"/>
+                  {% endif %}
+                  </figure>
+              {% else %}
+                <figure class="image ml-0 mr-l" style="padding-top: 10px">
+                  <img src="{{site.base}}/assets/images/logos/DAISY_300dpi.png"  alt="{{ contribution.title }}" style="object-fit: scale-down;"/>
+                </figure>
               {% endif %}
 
             </figure>
