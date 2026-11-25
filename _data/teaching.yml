@@ -12,6 +12,8 @@
       url: "https://unitn.coursecatalogue.cineca.it/corsi/2024/10117/insegnamenti/2024/50540_644835_96291/2011/50540?coorte=2024&schemaid=9163"
     - name: 2025-2026
       url: "https://unitn.coursecatalogue.cineca.it/corsi/2025/10883/insegnamenti/2025/50880_650697_96291/2025/50880?coorte=2025&schemaid=9809"
+    - name: 2026-2027
+      url: "https://unitn.coursecatalogue.cineca.it/corsi/2026/10883/insegnamenti/2026/51351_650805_96291/2026/51351?annoOrdinamento=2026"
 
 - id: FogAndCloud
   name: Fog and Cloud Computing
